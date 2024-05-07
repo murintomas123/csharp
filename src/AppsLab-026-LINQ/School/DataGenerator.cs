@@ -41,7 +41,7 @@ namespace AppsLab_026_LINQ.School
                 var height = (float)random.Next(1500000, 120000) / 100f;
                 var studentClass = Classes[random.Next(0, Classes.Count())];
                 var bahaviour = random.Next(10, 60);
-                var student = new student(firstname,lastname,city,studentClass);
+                var student = new student(firstname,lastname,city,studelass);
             }
             return result;
         }
