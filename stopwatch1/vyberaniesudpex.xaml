@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="vyberaniesudpex" Height="736" Width="414">
     <Grid>
-        
+        <Label Content="Label" HorizontalAlignment="Left" Height="109" Margin="41,251,0,0" VerticalAlignment="Top" Width="161"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="109" Margin="207,251,0,0" VerticalAlignment="Top" Width="161"/>
+
     </Grid>
 </Window>

@@ -3,18 +3,54 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:stopwatch1"
         mc:Ignorable="d"
         Title="stopwatch" Height="736" Width="414">
     <Grid>
-        <Button Content="Button" Margin="27,643,343,33" Width="44" Height="44" RenderTransformOrigin="-0.707,2.119"/>
-        <Button Margin="312,338,58,338" Width="70" Height="70" RenderTransformOrigin="-0.707,2.119" Click="Button_Click_1"/>
-        <Button Margin="49,338,321,338" Width="70" Height="70" RenderTransformOrigin="-0.707,2.119" Click="Button_Click"/>
-        <Button Content="Button" Margin="334,643,36,33" Width="44" Height="44" RenderTransformOrigin="-0.707,2.119"/>
-        <Button Content="Button" Margin="267,643,103,33" Width="44" Height="44" RenderTransformOrigin="-0.707,2.119"/>
-        <Button Content="Button" Margin="185,643,185,33" Width="44" Height="44" RenderTransformOrigin="-0.707,2.119"/>
-        <Button Content="Button" Margin="93,643,277,33" Width="44" Height="44" RenderTransformOrigin="-0.707,2.119"/>
-        <Label Name="Timer" Content="00:00:00" FontSize="80" Margin="49,163,32,436"/>
-
+        <Button Margin="312,338,36,312" RenderTransformOrigin="-0.707,2.119" Content="" Click="StartButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/images.png"/>
+            </Button.Background>
+        </Button>
+        <Button Margin="49,338,299,312" Height="70" RenderTransformOrigin="-0.707,2.119" Content="" Click="StopButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/pause-video-icon-free-vector.jpg"/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="TimerText" TextWrapping="Wrap" Text="" Margin="49,163,32,436" FontSize="72" RenderTransformOrigin="0.5,0.5" />
+        <Button Margin="174,338,174,312" Height="70" RenderTransformOrigin="-0.707,2.119" Content="" Click="ResetButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/restart-icon-26.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="42,644,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">
+            <Button.Background>
+                <ImageBrush ImageSource="/clock.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="102,644,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">
+            <Button.Background>
+                <ImageBrush ImageSource="/1339-budik.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="252,644,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60" Click="stopwatch">
+            <Button.Background>
+                <ImageBrush ImageSource="/stopwatch.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="312,644,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60" Click="Button_Click_3">
+            <Button.Background>
+                <ImageBrush ImageSource="/timer.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="0,614,0,0" Height="90" VerticalAlignment="Top" HorizontalAlignment="Center" Width="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/plusko.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="0,614,0,0" Height="90" VerticalAlignment="Top" HorizontalAlignment="Center" Width="90">
+            <Button.Background>
+                <ImageBrush ImageSource="/plusko.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

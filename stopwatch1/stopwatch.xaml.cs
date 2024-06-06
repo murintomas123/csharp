@@ -1,43 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace stopwatch1
 {
-    /// <summary>
-    /// Interaction logic for stopwatch.xaml
-    /// </summary>
     public partial class stopwatch : Window
     {
-         DateTime startingTime;
+        private DispatcherTimer timer;
+        private DateTime startTime;
+        private TimeSpan elapsedTime;
+
         public stopwatch()
         {
             InitializeComponent();
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(100);
+            timer.Tick += Timer_Tick;
+            elapsedTime = TimeSpan.Zero;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            DateTime endTime = DateTime.Now;
-            TimeSpan elapsedTime = endTime - startingTime;
-
-            Timer.Content = elapsedTime.TotalSeconds;
-
+            startTime = DateTime.Now - elapsedTime;
+            timer.Start();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void StopButton_Click(object sender, RoutedEventArgs e)
         {
-            startingTime = DateTime.Now;
-           
+            timer.Stop();
+            elapsedTime = DateTime.Now - startTime;
+        }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Stop();
+            elapsedTime = TimeSpan.Zero;
+            TimerText.Text = "00:00:00.0";
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            elapsedTime = DateTime.Now - startTime;
+            TimerText.Text = elapsedTime.ToString(@"hh\:mm\:ss\.f");
         }
     }
 }

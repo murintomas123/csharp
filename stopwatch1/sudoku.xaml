@@ -8,6 +8,36 @@
         Title="sudoku" Height="736" Width="414
         ">
     <Grid>
-        
+        <Button Content="" Margin="42,644,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">
+            <Button.Background>
+                <ImageBrush ImageSource="/clock.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="102,644,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">
+            <Button.Background>
+                <ImageBrush ImageSource="/1339-budik.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="252,644,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60" Click="stopwatch">
+            <Button.Background>
+                <ImageBrush ImageSource="/stopwatch.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="312,644,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60" Click="Button_Click_3">
+            <Button.Background>
+                <ImageBrush ImageSource="/timer.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="0,614,0,0" Height="90" VerticalAlignment="Top" HorizontalAlignment="Center" Width="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/plusko.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="0,614,0,0" Height="90" VerticalAlignment="Top" HorizontalAlignment="Center" Width="90">
+            <Button.Background>
+                <ImageBrush ImageSource="/plusko.png"/>
+            </Button.Background>
+        </Button>
+
     </Grid>
 </Window>
